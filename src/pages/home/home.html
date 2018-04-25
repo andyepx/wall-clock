@@ -1,8 +1,6 @@
 <ion-content padding>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-  <div id="time">
+  <div id="time" [style.color]="currentColor" (click)="nextColor()">
     {{currentTime}}
-    <br>
     <span>{{currentDate}}</span>
   </div>
 </ion-content>

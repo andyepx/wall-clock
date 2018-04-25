@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
 page-home {
   overflow: hidden;
   font-family: 'Inconsolata', monospace;
@@ -7,10 +9,9 @@ page-home {
     padding: 0 !important;
   }
   #time {
-    color: #A0126C;
     font-size: 35vw;
     width: 100%;
-    font-weight: 500;
+    font-weight: 700;
     height: 100vh;
     display: flex;
     justify-content: center;

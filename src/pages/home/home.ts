@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
 import {Insomnia} from '@ionic-native/insomnia';
 
 
@@ -10,23 +9,36 @@ import {Insomnia} from '@ionic-native/insomnia';
 export class HomePage {
   private currentTime: string = "";
   private currentDate: string = "";
+  private colors: string[] = ["#A0126C", "#a02e31", "#6ba037", "#20a0a0", "#7da00d", "#992fa0", "#a01720"];
+  private currentColor: string = "#A0126C";
+  private colorIndex: number = 0;
 
-  constructor(public navCtrl: NavController,
-              private insomnia: Insomnia) {
+  private months: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  constructor(private insomnia: Insomnia) {
     this.currentTime = this.getTime();
     this.currentDate = this.getDate();
   }
 
+  nextColor() {
+    if (this.colorIndex < this.colors.length - 1) {
+      this.colorIndex++;
+    } else {
+      this.colorIndex = 0;
+    }
+    this.currentColor = this.colors[this.colorIndex];
+  }
+
   ngOnInit() {
     setInterval(() => {
-      this.insomnia.keepAwake()
-        .then(() => {
-          this.currentTime = this.getTime();
-          this.currentDate = this.getDate();
-        }, () => {
+      // this.insomnia.keepAwake()
+      //   .then(() => {
+      this.currentTime = this.getTime();
+      this.currentDate = this.getDate();
+      // }, () => {
 
-        })
-    }, 1000 * 60)
+      // })
+    }, 1000 * 30)
   }
 
   private getTime(): string {
@@ -39,8 +51,7 @@ export class HomePage {
   private getDate(): string {
     const x = new Date();
     const d = x.getDate() < 10 ? `0${x.getDate()}` : x.getDate();
-    const m = (x.getMonth() + 1) < 10 ? `0${(x.getMonth() + 1)}` : (x.getMonth() + 1);
-    return `${d}/${m}/${x.getFullYear()}`;
+    return `${d} ${this.months[x.getMonth()]} ${x.getFullYear()}`;
   }
 
 }
