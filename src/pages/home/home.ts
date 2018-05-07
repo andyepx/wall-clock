@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Insomnia} from '@ionic-native/insomnia';
 
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -31,13 +30,12 @@ export class HomePage {
 
   ngOnInit() {
     setInterval(() => {
-      // this.insomnia.keepAwake()
-      //   .then(() => {
-      this.currentTime = this.getTime();
-      this.currentDate = this.getDate();
-      // }, () => {
-
-      // })
+      this.insomnia.keepAwake()
+        .then(() => {
+          this.currentTime = this.getTime();
+          this.currentDate = this.getDate();
+        }, () => {
+        })
     }, 1000 * 30)
   }
 

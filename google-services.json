@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "951566252593",
+    "firebase_url": "https://teardesign-wall-clock.firebaseio.com",
+    "project_id": "teardesign-wall-clock",
+    "storage_bucket": "teardesign-wall-clock.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951566252593:android:04a2f28ae53646fb",
+        "android_client_info": {
+          "package_name": "design.tear.wallclock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951566252593-1hqt9tk719rnc0c2aor4ambtrhiujj6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTvR-ym5wvvT5vH1Ez56jDeav6lbGieDY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

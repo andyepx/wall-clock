@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="design.tear.wallclock" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>wallClock</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>Wall Clock</name>
+    <description>Your "old device" wall clock app :)</description>
+    <author email="hello@teardesign.com" href="http://tear.design">Tear Design</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -82,5 +82,6 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <engine name="ios" spec="^4.4.0" />
+    <plugin name="cordova-plugin-firebase" spec="^1.0.4" />
+    <engine name="ios" spec="4.4.0" />
 </widget>
